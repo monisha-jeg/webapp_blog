@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+
+	{% for eachpost in post_list %}
+
+	<div id="post"> {{eachpost.post_text}}	</div>
+	
+	{% endfor %}
+
+
+	<button class="btn btn-large btn-success" id="profiledisplay"><a href="{% url 'blog:profile' user_id %}">My Profile</a> </button>
+
+	<button class="btn btn-large btn-success" id="logoutdisplay"> <a href="{% url 'blog:logout' %}"> LOGOUT </a> </button
+
+
+{% endblock %}

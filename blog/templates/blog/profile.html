@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<span id="heading"> <h2> {{user.first_name}} {{user.last_name}}'s Molog </h2> </span>
+
+<span id="usernamedisplay"> <h4> {{ user.username }} </h4> </span>
+
+{% for eachpost in post_list %}
+
+	<div id="post"> {{eachpost.post_text}}	</div>
+	<button class="btn btn-large btn-warning" id="delete"><a href="{% url 'blog:deletepost' user.id eachpost.id %}"> Delete </a> </button>
+	
+{% endfor %}
+
+
+
+<button class="btn btn-large btn-success" id="feeddisplay"><a href="{% url 'blog:feed' user.id %}"> Feed </a> </button>
+
+<button class="btn btn-large btn-success" id="addpostdisplay"><a href="{% url 'blog:addpost' user.id %}"> Add post </a> </button>
+
+<button class="btn btn-large btn-success" id="logoutdisplay"> <a href="{% url 'blog:logout' %}"> LOGOUT </a> </button>
+
+
+{% endblock %}

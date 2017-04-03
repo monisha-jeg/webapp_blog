@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+	<form class="form-horizontal registerform" method="post" name="testform" action="{% url 'blog:process' %}" novalidate>
+
+		{% csrf_token %}
+		<h1> MONOLOG </h1>
+		<br>	
+
+		<div class="form-group">
+			<input class="form-control box" type="text" name="fname" ng-model="fname" id="fname" required placeholder="First Name">
+		</div>
+		<span class="invalid" ng-show="testform.fname.$touched && testform.fname.$invalid"> Please enter first name</span>
+		<br>
+		<div class="form-group">
+			<input class="form-control box" type="text" name="lname" ng-model="lname" id="lname" required placeholder="Last Name">
+		</div>
+		<span class="invalid" ng-show="testform.lname.$touched && testform.lname.$invalid"> Please enter last name</span>
+		<br>
+		<div class="form-group">
+			<input class="form-control box" type="text" ng-model="email" name="email" id="email" placeholder="E-mail" required>
+		</div>
+		<span class="invalid" ng-show="testform.email.$touched && testform.email.$invalid"> Please enter email ID</span>
+		<br>
+		<div class="form-group">
+			<input class="form-control box" type="text" name="username" id="username" value="" placeholder="Username">
+		</div>
+		<span> <h6 id="error"> {{ err_mess }} </h6> </span>
+		<br>
+		<div class="form-group">
+			<input class="form-control box" type="password" name="password" id="password" value="" placeholder="Password">
+		</div>
+		<br>
+		<button class="btn btn-primary btn-lg" type=submit> REGISTER </button>
+
+	</form>
+
+</body>	
+</html>
+
+{% endblock %}

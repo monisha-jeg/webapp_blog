@@ -1,0 +1,126 @@
+
+.loginform, .registerform
+{
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	border-radius: 10%;
+	padding: 2%;
+	padding-right: 5%;
+	padding-left: 5%;
+	background-color: orange;
+	text-align: center;
+	width: 30%;
+	font-size: 20px;
+}
+
+.loginform
+{
+	height: 70%;
+}
+
+.btn a:hover
+{
+	text-decoration: none;
+	text-decoration-color: white;
+}
+
+#addpostdisplay
+{
+	position: absolute;
+	top: 1%;
+	right: 36%;
+	background-color: black;
+}
+
+#feeddisplay
+{
+	position: absolute;
+	top: 1%;
+	right: 20%;
+	background-color: black;
+}
+
+#profiledisplay
+{
+	position: absolute;
+	top: 1%;
+	right: 28%;
+	background-color: black;
+}
+
+#heading
+{
+	position: absolute;
+	top: 10%;
+	left: 5%;
+}
+
+#newpost
+{
+	position: absolute;
+	left: 10%;
+}
+
+#postbutton
+{
+	position: absolute;
+	left: 45%;
+	top: 60%;
+}
+
+#post
+{
+	padding-top: 7%;
+	font-size: 20px;
+}
+
+
+#logoutdisplay
+{
+	position: absolute;
+	top: 1%;
+	right: 10%;	
+	background-color: black;
+}
+
+#usernamedisplay
+{
+	position: absolute;
+	top: 1%;
+	right: 46%;	
+	color: white;
+	font-weight: bolder;
+}
+
+.registerform
+{
+	
+	top: 1%;
+	height: 100%;
+}
+
+body
+{
+	background-color: #ffb069;
+}
+
+#error
+{
+	color: red;
+
+}
+
+#email, #password, #fname, #lname, #username
+{
+	    height: 50px;	
+
+}
+.btn a
+{
+	text-decoration: none;
+	color: white;
+}
+
+
+

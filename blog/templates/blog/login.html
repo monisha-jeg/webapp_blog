@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+	<form class="form-horizontal loginform" method="post" action="{% url 'blog:logindone' %}">
+
+		{% csrf_token %}
+		<h1> MOLOG </h1>
+		<br>
+
+		<div class="form-group">
+			<input class="form-control box" type="text" name="username" id="username" placeholder="Username">
+		</div>
+		<br>
+		<div class="form-group">
+			<input class="form-control box" type="password" name="password" id="password" placeholder="Password">
+		</div>
+		<br>
+		<span> <h4 id="error"> {{ err_mess }} </h4> </span>
+
+		<button class="btn btn-primary btn-lg" type=submit> LOGIN </button>
+		<br><br>
+		<div>  <a href="{% url 'blog:register' %}"> Register yourself </a> </div>
+
+	</form>
+	
+
+	
+
+{% endblock %}
